@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/dietaBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+header {
+    padding: 1rem 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #ff7f50;
+}
+
+.titulo {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.titulo h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.titulo p {
+    color: #ccc;
+}
+
+.tabela-dieta {
+    padding: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th,
+td {
+    border: 1px solid #333;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+}
+
+th {
+    background-color: #262626;
+    color: #ff7f50;
+}
+
+.cards-dicas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.card-dica {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    min-width: 240px;
+    height: 240px;
+    box-sizing: border-box;
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 127, 80, 0.2);
+    margin: 1rem;
+}
+
+.card-dica:hover {
+    transform: scale(1.05);
+}
+
+.card-dica i {
+    font-size: 2.5rem;
+    color: #ff7f50;
+    margin-bottom: 1rem;
+}
+
+.card-dica p {
+    color: #ccc;
+}
+
+
+@media (min-width: 1024px) {
+    .card-dica {
+        width: 22%
+            /* 4 cards por linha */
+    }
+}
+
+/* Para telas médias (tablets) - 2 cards por linha */
+@media (max-width: 1024px) {
+    .card-dica {
+        width: 48%
+            /* 2 cards por linha */
+    }
+}
+
+/* Para telas pequenas (celulares) - 1 card por linha */
+@media (max-width: 480px) {
+    .card-dica {
+        width: 100%;
+        /* 1 card por linha */
+    }
+}
+
+footer {
+    background-color: #000;
+    color: #999;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}

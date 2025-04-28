@@ -1,0 +1,151 @@
+:root {
+    --darker: #0a0a0a;
+    --gradient: linear-gradient(135deg, #75127e 0%, #114764 100%);
+    --text: #ffffff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  header {
+    padding: 1rem 2rem;
+    background: rgba(10, 10, 10, 0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav h1 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav ul li a {
+    color: var(--text);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #A020F0;
+  }
+  
+  #depoimentos {
+    min-height: 100vh;
+    padding: 100px 2rem 2rem;
+    text-align: center;
+    background-color: var(--darker);
+  }
+  
+  .depoimentos-titulo h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: var(--text);
+  }
+  
+  .depoimentos-titulo p {
+    color: #ccc;
+    font-size: 1.1rem;
+  }
+  
+  .depoimentos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+  
+  .depoimento-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 0 15px rgba(115, 8, 136, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .depoimento-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .depoimento-texto {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #ccc;
+  }
+  
+  .depoimento-autor {
+    display: flex;
+    align-items: center;
+  }
+  
+  .autor-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  
+  .autor-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+    color: var(--text);
+  }
+  
+  .autor-info p {
+    color: #aaa;
+    font-size: 0.85rem;
+  }
+  
+  .rating {
+    color: gold;
+    margin: 1rem 0;
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .depoimentos-titulo h2 {
+      font-size: 2rem;
+    }
+    
+    nav ul {
+      gap: 1rem;
+    }
+    
+    .depoimento-card {
+      width: 100%;
+    }
+  }

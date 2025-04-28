@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/planoBackground');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+header {
+    padding: 1rem 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #A020F0;
+}
+
+main {
+    height: calc(100vh - 13rem);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    width: auto;
+    min-width: 310px;
+    display: flex;
+    flex-direction: column;
+    background-color: #262626;
+    box-shadow: 0 0 15px rgba(115, 8, 136, 0.2); 
+    transition: all 0.3s ease;
+    padding: 30px 20px;
+    border-radius: 20px;
+    gap: 20px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, button {
+    height: 30px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+
+}
+
+button {
+    background-color: #A020F0;
+    color: white;
+}
+
+
+footer {
+    background-color: #000;
+    color: #999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}   

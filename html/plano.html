@@ -13,37 +13,68 @@
 
 <body>
 
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="treinos.html">Treinos</a>
-        <a href="dieta.html">Dieta</a>
-        <a href="./depoimentos.html">Depoimentos</a>
-        <a href="contato.html">Contato</a>
-    </nav>
+    <header>
+        <nav>
+            <h1>CMG Fit</h1>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./dieta.html">Dieta</a></li>
+                <li><a href="./contato.html ">Contato</a></li>
+                <li><a href="./treinos.html">Treinos</a></li>
+                <li><a href="./depoimentos.html">Depoimentos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Seu Plano Ideal</h1>
 
-    <main id="plano">
-        <h2 class="section-title">Seu Plano Ideal</h2>
+            <form>
+                <label for="name">
+                    Nome:
+                    <input type="text" name="name" placeholder="Seu Nome Completo" required>
+                </label>
+                <label for="age">
+                    Idade:
+                    <input type="number" placeholder="Idade" min="12" max="99" required name="age">
+                </label>
 
-        <form>
-            <input type="text" placeholder="Seu Nome Completo" required>
-            <input type="number" placeholder="Idade" min="12" max="99" required>
+                <label for="">
+                    objetivo:
+                    <select required>
+                        <option value="" disabled selected hidden>Selecione seu Objetivo</option>
+                        <option>Emagrecer</option>
+                        <option>Ganhar Massa Muscular</option>
+                        <option>Recomposição Corporal</option>
+                        <option>Melhorar Resistência</option>
+                    </select>
+                </label>
 
-            <select required>
-                <option value="" disabled selected>Selecione seu Objetivo</option>
-                <option>Emagrecer</option>
-                <option>Ganhar Massa Muscular</option>
-                <option>Recomposição Corporal</option>
-                <option>Melhorar Resistência</option>
-            </select>
+                <select required>
+                    <option value="" disabled selected hidden>Nivel de atividade Fisica</option>
+                    <option>Sedentário</option>
+                    <option>Iniciante</option>
+                    <option>intermediário</option>  
+                    <option>Avançado</option>
+                </select>
+                
+                <label for="limit">
+                    Limitações Fisicas:
+                    <input type="text" name="limit" id="limit" placeholder="Limitações fisicas">
+                </label>
 
-            <input type="text" placeholder="Nível de Atividade Física (ex: iniciante, intermediário)">
-            <!--adicionar mais coisas-->
 
-            <button type="submit">
-                <i class="fas fa-dumbbell"></i> Criar Meu Plano
-            </button>
-        </form>
+                <button type="submit">
+                    <i class="fas fa-dumbbell"></i> Criar Meu Plano
+                </button>
+            </form>
+        </section>
     </main>
+
+    <footer>
+        <p>© 2025 - CMG Fit | Todos os direitos reservados</p>
+       
+    </footer>
 </body>
 
 </html>

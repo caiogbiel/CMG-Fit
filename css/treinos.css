@@ -95,6 +95,17 @@ nav ul li a:hover {
     color: #ccc;
 }
 
+.seletor-treino {
+    margin: 20px;
+    text-align: center;
+}
+
+#objetivo-select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+
 footer {
     background-color: #000;
     color: #999;

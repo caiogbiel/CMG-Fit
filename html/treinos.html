@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treinos</title>
+    <title>Treinos Personalizados | CMG Fit</title>
     <link rel="stylesheet" href="../css/treinos.css">
+    <script src="../js/treinos.js" defer></script>
 </head>
 <body>
     <header>
@@ -20,56 +21,26 @@
         </nav>
     </header>
 
-    <section class="treinos-banner">
-        <h2>Escolha seu Grupo Muscular</h2>
-        <p>Treinos focados para alcançar o seu melhor!!!</p>
-    </section>
+    <main>
+        <section class="seletor-treino">
+            <h2>Escolha seu Objetivo</h2>
+            <select id="objetivo-select">
+                <option value="">-- Selecione --</option>
+                <option value="emagrecimento">Emagrecimento</option>
+                <option value="ganho">Ganho de Massa</option>
+                <option value="manutencao">Manutenção</option>
+            </select>
+        </section>
 
-    <section class="treinos-lista">
-        <div class="treino-card">
-            <img src="../img/treinoPernas.jpg" alt="Treino de Pernas">
-            <h3>Pernas</h3>
-            <ul>
-                <li>Agachamento Livre</li>
-                <li>Leg Press</li>
-                <li>Afundo</li>
-                <li>Stiff</li>
-            </ul>
-        </div>
-        <div class="treino-card">
-            <img src="../img/treino_de_peito.jpg" alt="Treino de Peito">
-            <h3>Peito</h3>
-            <ul>
-                <li>Supino Reto</li>
-                <li>Supino Inclinado</li>
-                <li>Crucifixo</li>
-                <li>Flexão dee Braço</li>
-            </ul>
-        </div>
-        <div class="treino-card">
-            <img src="../img/treinoAbdomen.jpg" alt="Treino de Abdomen">
-            <h3>Abdômen</h3>
-            <ul>
-                <li>Prancha</li>
-                <li>Abdominal Infra</li>
-                <li>Abdominal Supra</li>
-                <li>Elevação de Pernas</li>
-            </ul>
-        </div>
-        <div class="treino-card">
-            <img src="../img/treinoCostas.jpg" alt="Treino de Costas">
-            <h3>Costas</h3>
-            <ul>
-                <li>Puxada Frente</li>
-                <li>Remada Curvada</li>
-                <li>Pullover</li>
-                <li>Levantamento Terra</li>
-            </ul>
-        </div>
-    </section>
+        <section id="treinos-display" class="treinos-lista">
+            <!-- Aqui será exibido dinamicamente os treinos -->
+        </section>
+    </main>
 
     <footer>
         <p>© 2025 CMG-Fit - Todos os direitos reservados</p>
     </footer>
+
+    <script src="../js/treinos.js"></script>
 </body>
 </html>

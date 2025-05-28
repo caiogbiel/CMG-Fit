@@ -3,75 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fitness Planner - Depoimentos</title>
-  <link rel="stylesheet" href="../css/depoimentos.css">
+  <title>CMG FIT - Depoimentos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="depoimentos.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>CMG Fit</h1>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="./contato.html">Contato</a></li>
-        <li><a href="./plano.html">Monte seu Plano</a></li>
-        <li><a href="./dieta.html">Dieta</a></li>
-        <li><a href="./treinos.html">Treinos</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section id="depoimentos">
-    <div class="depoimentos-titulo">
-      <h2>DEPOIMENTOS REAIS</h2>
-      <p>Veja a transformação dos nossos clientes e inspire-se!</p>
+  <!-- Barra de navegação -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-transparent">
+    <div class="container">
+      <a class="navbar-brand logo" href="../index.html">CMG FIT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav ms-auto menu-links">
+            <a class="nav-link" href=".html/index.html">Home</a>
+            <a class="nav-link" href="./html/entrar.html">Login</a>
+            <a class="nav-link" href="./html/treinos.html">Treinos</a>
+            <a class="nav-link" href="./html/dieta.html">Dieta</a>
+            <a class="nav-link" href="./html/plano.html">Plano</a>
+            <a class="nav-link" href="./html/contato.html">Contato</a>
+            <a class="nav-link" href="./html/sobre.html">Sobre Nós</a>
+        </div>
+      </div>
     </div>
-
-    <div class="depoimentos-container">
-      <!-- Depoimento 1 -->
-      <div class="depoimento-card">
-        <div class="rating">★★★★★</div>
-        <p class="depoimento-texto">
-          "O CMG Fit mudou minha vida! Perdi 18kg em 6 meses com a combinação perfeita de treinos e dieta. Hoje me sinto mais disposta e saudável."
-        </p>
-        <div class="depoimento-autor">
-          <div class="autor-avatar">M</div>
-          <div class="autor-info">
-            <h4>Marina, 34 anos</h4>
-            <p> Professora | Emagrecimento</p>
-          </div>
-        </div>
+  </nav>
+  
+  <!-- Seção de Depoimentos -->
+  <section class="depoimentos-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="depoimentos-titulo">DEPOIMENTOS REAIS</h2>
+        <p class="depoimentos-subtitulo">Veja a transformação dos nossos clientes e inspire-se</p>
       </div>
-
-      <!-- Depoimento 2 -->
-      <div class="depoimento-card">
-        <div class="rating">★★★★★</div>
-        <p class="depoimento-texto">
-          "Aos 65 anos, recuperei minha mobilidade e perdi a barriga. Os treinos e o acompanhamento nutricional foram essenciais para meu resultado."
-        </p>
-        <div class="depoimento-autor">
-          <div class="autor-avatar">F</div>
-          <div class="autor-info">
-            <h4>Francisco, 65 anos</h4>
-            <p>Aposentado | Melhorar Resistência</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Depoimento 3 -->
-      <div class="depoimento-card">
-        <div class="rating">★★★★☆</div>
-        <p class="depoimento-texto">
-          "Ganhei 7kg de massa muscular em 8 meses. O plano de treino evolui junto com meu condicionamento, sempre me desafiando na medida certa!"
-        </p>
-        <div class="depoimento-autor">
-          <div class="autor-avatar">M</div>
-          <div class="autor-info">
-            <h4>Mário, 26 anos</h4>
-            <p>Desenvolvedor | Hipertrofia</p>
+      
+      <div id="depoimentos-container" class="row g-4 justify-content-center"></div>
+      
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-8">
+          <div class="card novo-depoimento-card">
+            <div class="card-body">
+              <h3 class="card-title text-center mb-4">Deixe seu depoimento</h3>
+              
+              <form id="depoimentoForm">
+                <div id="form-message" class="alert d-none"></div>
+                
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="nome" class="form-label">Nome*</label>
+                    <input type="text" class="form-control" id="nome" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="idade" class="form-label">Idade*</label>
+                    <input type="number" class="form-control" id="idade" required min="10" max="120">
+                  </div>
+                </div>
+                
+                <div class="mb-3">
+                  <label for="profissao" class="form-label">Profissão/Objetivo*</label>
+                  <input type="text" class="form-control" id="profissao" required>
+                </div>
+                
+                <div class="mb-3">
+                  <label for="depoimento" class="form-label">Seu depoimento*</label>
+                  <textarea class="form-control" id="depoimento" rows="4" required></textarea>
+                </div>
+                
+                <div class="mb-3">
+                  <label class="form-label">Avaliação*</label>
+                  <div class="rating-stars">
+                    <i class="bi bi-star-fill" data-rating="1"></i>
+                    <i class="bi bi-star-fill" data-rating="2"></i>
+                    <i class="bi bi-star-fill" data-rating="3"></i>
+                    <i class="bi bi-star-fill" data-rating="4"></i>
+                    <i class="bi bi-star-fill" data-rating="5"></i>
+                    <input type="hidden" id="rating" required>
+                  </div>
+                </div>
+                
+                <div class="d-grid">
+                  <button type="submit" class="btn cta-button">Enviar Depoimento</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="depoimentos.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 # 🏋️‍♂️ CMG-Fit
 
-**Projeto da Unidade - Aplicação Web Estática com HTML e CSS**  
+**Projeto da Unidade I - Aplicação Web Estática com HTML e CSS**  
+**Projeto da Unidade II - Implementação de Framework de Layout e JavaScript 
 **Equipe:** CMG Fit  
 **Tema:** Fitness Planner – Monte sua rotina de treinos e alimentação saudável.
 
@@ -8,7 +9,7 @@
 
 ## 🎯 Objetivo do Projeto
 
-Desenvolver uma aplicação web estática com HTML e CSS que auxilie o usuário a organizar sua rotina fitness. O sistema oferece dicas de treinos, sugestões de alimentação e formulários para personalizar planos de acordo com os objetivos individuais.
+Desenvolver uma aplicação web que auxilie o usuário a organizar sua rotina fitness. O sistema oferece dicas de treinos, sugestões de alimentação e formulários para personalizar planos de acordo com os objetivos individuais.
 
 ---
 
@@ -31,14 +32,16 @@ Desenvolver uma aplicação web estática com HTML e CSS que auxilie o usuário 
 | Página             | Descrição |
 |--------------------|-----------|
 | `index.html`       | Página inicial com banner motivacional, destaques e depoimentos. |
-| `treinos.html`     | Lista de treinos por grupo muscular com imagens e flexbox. |
+| `login.html`       | Cadastro / login do usuário. |
+| `treinos.html`     | Lista de treinos por grupo muscular. |
 | `dieta.html`       | Tabela com sugestões de cardápios e dicas alimentares em cards. |
 | `plano.html`       | Formulário interativo para montar plano personalizado de treino e dieta. |
+| `depoimentos.html` | Cards com depoimentos fictícios e formulário de submissão |
 | `contato.html`     | Página com formulário de contato, equipe fictícia e mapa incorporado. |
 
 ---
 
-## ✨ Funcionalidades e Recursos Usados
+## ✨ Funcionalidades e Recursos Usados: Unidade I 
 
 - ✅ Estruturação com **HTML5** semântico (`header`, `nav`, `main`, `section`, `footer`)
 - ✅ Estilização com **CSS3** e responsividade

@@ -1,136 +1,34 @@
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/treinos.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../img/treinos.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    color: #eee;
-}
-
-header {
-    padding: 1rem 2rem;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav h1 {
-    font-size: 1.8rem;
-    text-transform: uppercase;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-nav ul li a:hover {
-    color: #A020F0;
-}
-
-.treinos-banner {
-    padding: 5rem 1rem;
-    text-align: center;
-}
-
-.treinos-banner h2{
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.treinos-banner p {
-    font-size: 1.2rem;
-    color: #ccc;
-}
-
-.treinos-lista {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
 }
 
 .treino-card {
-    background: #1a1a1a;
+    background: #000 !important;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(150, 18, 238, 0.3);
     transition: transform 0.3s;
 }
 
+
 .treino-card:hover {
     transform: scale(1.05);
 }
 
-.treino-card img {
-    width: 100%;
-    height: 180px;
-}
-
-.treino-card h3{
-    margin: 1rem;
+.treino-card h3 {
     color: #A020F0;
 }
 
 .treino-card ul {
     list-style: none;
-    padding: 0 1rem 1rem 1rem;
+    padding-left: 0;
 }
 
 .treino-card ul li {
     margin-bottom: 0.5rem;
-    font-size: 1rem;
     color: #ccc;
-}
-
-.seletor-treino {
-    margin: 20px;
-    text-align: center;
-}
-
-#objetivo-select {
-    padding: 10px;
-    font-size: 16px;
-}
-
-
-footer {
-    background-color: #000;
-    color: #999;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-}
-
-/* Para telas grandes (PC) - 4 cards por linha */
-@media (min-width: 1024px) {
-    .treino-card {
-        width: 22%;
-    }
-}
-
-/* Para telas médias (tablets) - 2 cards por linha */
-@media (min-width: 481px) and (max-width: 1023px) {
-    .treino-card {
-        width: 45%;
-    }
-}
-
-/* Para telas pequenas (celulares) - 1 card por linha */
-@media (max-width: 480px) {
-    .treino-card {
-        width: 100%;
-    }
 }

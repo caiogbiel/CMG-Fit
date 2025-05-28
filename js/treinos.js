@@ -1,36 +1,39 @@
 const treinosPorObjetivo = {
-    emagrecimento: [
-        { grupo: 'Cardio', exercicios: ['Corrida', 'Pular corda', 'Bicicleta ergométrica'] },
-        { grupo: 'Full Body', exercicios: ['Burpees', 'Polichinelos', 'Mountain climbers'] }
+    emagrecer: [
+        ['Corrida', 'Abdominal', 'Polichinelo'],
+        ['Bicicleta', 'Prancha', 'Mountain climbers'],
+        ['HIIT', 'Flexões', 'Agachamentos'],
+        ['Natação', 'Prancha lateral', 'Burpees'],
+        ['Caminhada', 'Alongamento', 'Respiração']
     ],
     ganho: [
-        { grupo: 'Peito', exercicios: ['Supino reto', 'Supino inclinado', 'Crucifixo'] },
-        { grupo: 'Pernas', exercicios: ['Agachamento livre', 'Leg press', 'Afundo'] }
+        ['Supino reto', 'Crucifixo', 'Flexão'],
+        ['Agachamento', 'Leg press', 'Afundo'],
+        ['Remada curvada', 'Puxada frente', 'Pullover'],
+        ['Desenvolvimento', 'Elevação lateral', 'Arnold press'],
+        ['Rosca direta', 'Tríceps testa', 'Abdominal']
     ],
     manutencao: [
-        { grupo: 'Costas', exercicios: ['Puxada frente', 'Remada curvada', 'Pullover'] },
-        { grupo: 'Abdômen', exercicios: ['Prancha', 'Abdominal supra', 'Elevação de pernas'] }
+        ['Caminhada', 'Alongamento', 'Respiração'],
+        ['Circuito leve', 'Prancha', 'Alongamento'],
+        ['Bicicleta', 'Agachamento leve', 'Flexão'],
+        ['Corrida moderada', 'Elevação pélvica', 'Respiração'],
+        ['Natação leve', 'Abdominal leve', 'Alongamento']
     ]
 };
 
 const selectObjetivo = document.getElementById('objetivo-select');
-const treinosDisplay = document.getElementById('treinos-display');
+const treinoCards = document.querySelectorAll('.treino-card ul');
 
 selectObjetivo.addEventListener('change', () => {
     const objetivo = selectObjetivo.value;
-    treinosDisplay.innerHTML = ''; // Limpa o conteúdo atual
 
     if (treinosPorObjetivo[objetivo]) {
-        treinosPorObjetivo[objetivo].forEach(treino => {
-            const card = document.createElement('div');
-            card.className = 'treino-card';
-            card.innerHTML = `
-                <h3>${treino.grupo}</h3>
-                <ul>
-                    ${treino.exercicios.map(ex => `<li>${ex}</li>`).join('')}
-                </ul>
-            `;
-            treinosDisplay.appendChild(card);
+        treinosPorObjetivo[objetivo].forEach((treinoDia, index) => {
+            treinoCards[index].innerHTML = treinoDia.map(ex => `<li>${ex}</li>`).join('');
         });
+    } else {
+        // Se não selecionar, limpa tudo
+        treinoCards.forEach(card => card.innerHTML = '');
     }
 });

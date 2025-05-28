@@ -1,121 +1,110 @@
 :root {
-    --darker: #0a0a0a;
-    --gradient: linear-gradient(135deg, #75127e 0%, #114764 100%);
-    --text: #ffffff;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    color: var(--text);
-    background-color: var(--darker);
-  }
-  
-  a {
-    text-decoration: none;
+  --darker: #0a0a0a;
+  --gradient: linear-gradient(135deg, #75127e 0%, #114764 100%);
+  --text: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  background-color: var(--darker);
+  padding-top: 56px; 
+}
+
+.navbar-transparent {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-transparent .navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+  color: white !important;
+}
+
+.navbar-transparent .nav-link {
+  color: white !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.navbar-transparent .nav-link:hover {
+  color: #ebebeb !important;
+}
+
+.navbar-transparent .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 1rem;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.navbar-transparent .nav-link:hover::after {
+  width: calc(100% - 2rem);
+}
+
+header {
+  min-height: 100vh;
+  background: 
+    linear-gradient(rgba(18, 18, 18, 0.7), rgba(10, 10, 10, 0.8)),
+    url('https://images.unsplash.com/photo-1533681904393-9ab6eee7e408?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.cta-button {
+  background: var(--gradient) !important;
+  border: none !important;
+  padding: 1rem 2.5rem !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+  text-transform: uppercase;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
   }
 
-  nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: transparent; 
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.5rem;
-    z-index: 1000;
-    padding: 0 2rem;
-    font-family: 'Times New Roman', Times, serif;
-    text-transform: uppercase;
-  }
-  
-  nav .logo {
-    display: block;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--text);
-    white-space: nowrap;
-  }
-  nav .menu-links{
-    display: flex;
-    gap: 2rem; 
-    margin-left: auto;
-  }
-  
-  nav a {
-    color: var(--text);
-    font-weight: 600;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-    transition: color 0.3s ease;
-  }
-  
-  nav a:hover {
-    color: #10769e;
-  }
-  
-  header {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 2rem;
-    background: 
-      linear-gradient(rgba(18, 18, 18, 0.7), rgba(10, 10, 10, 0.8)),
-      url('https://images.unsplash.com/photo-1533681904393-9ab6eee7e408?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center 35%/cover no-repeat;
-  }
-  
-  header h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
   header p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin-bottom: 2rem;
+    font-size: 1rem;
   }
-  
-  .cta-button {
-    display: inline-block;
-    background: var(--gradient);
-    color: white;
-    padding: 1rem 2.5rem;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  .navbar-transparent .navbar-collapse {
+    background: transparent !important;
+    padding: 1rem;
+    margin-top: 0.5rem;
   }
-  
-  .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(135deg, #471313 0%, #09035c 100%);
-  }
-  
-  @media (max-width: 768px) {
-   
-    header h1 {
-      font-size: 2.5rem;
-    }
-  
-    header p {
-      font-size: 1rem;
-    }
-  
-    nav .menu-links{
-      gap: 1rem;
-    }
-  
-  }
-  
+}

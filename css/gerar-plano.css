@@ -1,0 +1,26 @@
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../img/plano.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.accordion-button {
+    border-radius: 0 !important;
+}
+
+#btnGerarPlano {
+    border-radius: 12px;
+    padding: 0.5rem 1.5rem;
+    transition: transform 0.3s;
+}
+
+#btnGerarPlano:hover {
+    transform: scale(1.05);
+}
+
+#planoGerado pre {
+    white-space: pre-wrap;
+    color: #A020F0;
+}

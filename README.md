@@ -2,6 +2,7 @@
 
 **Projeto da Unidade I - Aplicação Web Estática com HTML e CSS**  
 **Projeto da Unidade II - Implementação de Framework de Layout e JavaScript**
+
 **Equipe:** CMG Fit  
 **Tema:** Fitness Planner – Monte sua rotina de treinos e alimentação saudável.
 
